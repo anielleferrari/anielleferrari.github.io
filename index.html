@@ -5,22 +5,110 @@
   <meta charset="UTF-8">
  <title>Anielle Ferrari | Microbiologist </title>
   <link rel="icon" type="image/png" href="microscope_1860786.png">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: 'Georgia', serif; line-height: 1.6; color: #333; margin:0; }
+
+    /* Menu fixo */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2rem;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #32BEA6;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .nav-left a { font-size: 1.2rem; }
+    .nav-right { display: flex; align-items: center; }
+
+    /* Capa */
+    .hero {
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1581090700227-52b73d58b9b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzAxNzh8MHwxfHNlYXJjaHwxfHxsaWZlJTIwYmFjdGVyaWE=&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      margin-top: 60px; /* espaço para menu fixo */
+    }
+
+    .container { max-width: 800px; margin: auto; padding: 2rem 1rem; }
+    section { margin-bottom: 4rem; }
+    h2 { border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; margin-bottom: 1rem; color: #32BEA6; }
+
+    .about { display: flex; align-items: center; gap: 20px; }
+    .about img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 2px solid #32BEA6; }
+
+  </style>
 </head>
 <body>
+
+  <!-- Menu fixo -->
   <nav>
-    <a href="index.html"><strong>Anielle Ferrari</strong></a>
-    <div>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="contact.html">Contact</a>
+    <div class="nav-left">
+      <a href="#home">Anielle Ferrari</a>
+    </div>
+    <div class="nav-right">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <main>
-    <h1>Welcome!</h1>
-    <p>Hello, I’m <strong>Anielle Ferrari</strong>, a microbiologist passionate about bioinformatics and bacterial signaling. Explore my research and publications below.</p>
-    <img src="your-image.jpg" alt="Banner" style="width:100%;border-radius:12px;">
-  </main>
+  <!-- Capa -->
+  <div class="hero" id="home">
+    Anielle Ferrari
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+
+    <!-- About me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about">
+        <img src="https://via.placeholder.com/150" alt="Your photo">
+        <p>Hello! I’m Anielle Ferrari, a microbiologist and bioinformatician. My research focuses on bacterial genetics, cyclic nucleotide signaling, and genome analysis. I enjoy combining experimental and computational approaches to understand microbial processes.</p>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <h2>Research</h2>
+      <p>My main research projects include genome assembly of novel bacterial species, in silico analysis of protein structures, and bioinformatic pipelines for functional annotation. I am also exploring regulatory networks mediated by c-di-AMP and other signaling molecules in bacteria.</p>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>Ferrari, A. et al. (2024). <i>Title of Preprint</i>. <a href="#">[Link]</a></li>
+        <li>Other publications coming soon...</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:anielle.ferrari@email.com">anielle.ferrari@email.com</a></p>
+      <p>GitHub: <a href="https://github.com/anielleferrari">github.com/anielleferrari</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/anielleferrari</a></p>
+    </section>
+
+  </div>
 </body>
 </html>

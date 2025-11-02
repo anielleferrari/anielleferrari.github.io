@@ -4,251 +4,218 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anielle Ferrari | Microbiologist</title>
-    <!-- ícone na aba -->
   <link rel="icon" type="image/png" href="microscope_1860786.png">
-
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lota:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Cores e estilo -->
   <style>
-    
-:root{
-  --bg:#ffffff;
-  --menu-bg:#18BC9C;
-  --accent:#18BC9C; /* links do corpo */
-  --muted:#8b949e;
-  --text:#0b0f1a;
-  --glass: rgba(255,255,255,0.03);
-}
+    :root {
+      --bg:#ffffff;
+      --menu-bg:#18BC9C;
+      --accent:#18BC9C;
+      --muted:#8b949e;
+      --text:#0b0f1a;
+      --glass: rgba(255,255,255,0.03);
+    }
 
-*{box-sizing:border-box; margin:0; padding:0;}
-html,body{
-  height:100%;
-  font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; 
-  background:var(--bg); 
-  color:var(--text);
-}
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html, body {
+      height:100%;
+      font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-weight: 400; /* peso normal para o corpo */
+      background: var(--bg);
+      color: var(--text);
+    }
 
-/* LINKS DO CORPO */
-a {
-  color: var(--accent); /* verde água */
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover { color: #0f7767; }
 
-a:hover {
-  color: #0f7767; /* hover um pouco mais escuro */
-}
+    header{
+      position:fixed;
+      left:0; right:0; top:0;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      backdrop-filter:blur(6px);
+      background:var(--menu-bg);
+      border-bottom:1px solid rgba(0,0,0,0.05);
+      z-index:30;
+    }
 
-/* HEADER E MENU */
-header{
-  position:fixed;
-  left:0;
-  right:0;
-  top:0;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  backdrop-filter:blur(6px);
-  background:var(--menu-bg);
-  border-bottom:1px solid rgba(0,0,0,0.05);
-  z-index:30;
-}
+    .nav{
+      width:100%;
+      max-width:1100px;
+      padding:0 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
 
-.nav{
-  width:100%;
-  max-width:1100px;
-  padding:0 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #052A24;
+    }
 
-.brand{
-  font-weight:700;
-  letter-spacing:0.08em;
-  font-family:'Playfair Display',serif;
-  color:#052A24; /* verde escuro */
-}
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
 
-.menu{
-  display:flex;
-  gap:18px;
-  align-items:center;
-}
+    .menu a{
+      font-weight:600;
+      font-size:0.95rem;
+      color: #052A24;
+      transition: color 0.2s ease;
+    }
+    .menu a:hover{ color: #ffffff; }
+    .menu a.active{ color: #ffffff; border-bottom: 2px solid #ffffff; }
 
-.menu a{
-  font-weight:600;
-  font-size:0.95rem;
-  color: #052A24; /* verde escuro */
-  transition: color 0.2s ease;
-}
+    /* TÍTULOS DO SITE */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lota', sans-serif;
+      font-weight: 700;
+    }
 
-.menu a:hover{
-  color: #ffffff; /* branco ao passar o mouse */
-}
+    /* MAIN E LEFT/RIGHT */
+    main{
+      max-width:1100px;
+      margin:110px auto 60px;
+      padding:24px;
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:32px;
+      align-items:start;
+    }
 
-.menu a.active{
-  color: #ffffff; /* branco na página ativa */
-  border-bottom: 2px solid #ffffff; /* opcional */
-}
+    .left{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+    }
 
-/* MAIN E LEFT/RIGHT */
-main{
-  max-width:1100px;
-  margin:110px auto 60px;
-  padding:24px;
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:32px;
-  align-items:start;
-}
+    .photo{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      overflow:hidden;
+      border:6px solid rgba(0,0,0,0.05);
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-.left{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:18px;
-}
+    .socials {
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:center;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .social-row{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+    }
+    .social-row a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px; height:40px;
+      border-radius:10px;
+      background:var(--glass);
+      border:1px solid rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .social-row a:hover{
+      transform: scale(1.1);
+      background: rgba(24, 188, 156, 0.1);
+    }
+    .social-row img{
+      width:22px; height:22px;
+      object-fit:contain;
+    }
 
-.photo{
-  width:200px;
-  height:200px;
-  border-radius:50%;
-  overflow:hidden;
-  border:6px solid rgba(0,0,0,0.05);
-}
+    .cv-btn{
+      padding:10px 18px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(24,188,156,0.12), rgba(24,188,156,0.12));
+      border:1px solid rgba(42,143,124,0.22);
+      color:#052A24;
+      font-weight:700;
+    }
 
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+    .right h1 {
+    font-family: 'Montserrat', sans-serif; /* mesma do corpo do texto */
+    font-size: 1.6rem; /* ajuste o tamanho se quiser maior ou menor */
+    font-weight: 600; /* mantém um pouco de destaque, mas não tão pesado quanto 700 */
+    margin: 0 0 6px;
+    }
 
-/* Redes sociais em duas linhas */
-.socials {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 12px;
-}
 
-.social-row {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
+    .right p.lead{
+      color:var(--muted);
+      font-size:1.02rem;
+      margin-top:4px;
+    }
 
-.social-row a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--glass);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, background 0.2s ease;
-}
+    .meta{ margin-top:12px; color:var(--muted); }
+    .skills{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .chip{
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(0,0,0,0.02);
+      border:1px solid rgba(0,0,0,0.02);
+      font-weight:600;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
 
-.social-row a:hover {
-  transform: scale(1.1);
-  background: rgba(24, 188, 156, 0.1);
-}
+    hr{
+      border:none;
+      border-top:1px solid rgba(0,0,0,0.05);
+      margin:32px 0;
+    }
 
-.social-row img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
+    /* RESPONSIVO */
+    @media (max-width:1100px){ main{grid-template-columns:1fr;} } 
+    @media (max-width:768px){
+      .photo{width:140px;height:140px;} 
+      .right h1{font-size:1.8rem;}
+    } 
+    @media (max-width:480px){
+      .cv-btn{padding:8px 14px;font-size:0.9rem;} 
+      .right h1{font-size:1.6rem;} 
+      .chip{font-size:0.8rem;padding:6px 10px;}
+    }
 
-/* BOTÃO CV */
-.cv-btn{
-  padding:10px 18px;
-  border-radius:10px;
-  background:linear-gradient(180deg, rgba(245,197,24,0.12), rgba(245,197,24,0.08));
-  border:1px solid rgba(245,197,24,0.22);
-  color:var(--accent);
-  font-weight:700;
-}
-
-/* RIGHT CONTENT */
-.right h1{
-  font-family:'Playfair Display',serif;
-  font-size:2.2rem;
-  margin:0 0 6px;
-}
-
-.right p.lead{
-  color:var(--muted);
-  font-size:1.02rem;
-  margin-top:4px;
-}
-
-.meta{
-  margin-top:12px;
-  color:var(--muted);
-}
-
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:12px;
-}
-
-.chip{
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(0,0,0,0.02);
-  border:1px solid rgba(0,0,0,0.02);
-  font-weight:600;
-  color:var(--muted);
-  font-size:0.9rem;
-}
-
-hr{
-  border:none;
-  border-top:1px solid rgba(0,0,0,0.05);
-  margin:32px 0;
-}
-
-/* RESPONSIVO */
-@media (max-width:1100px){
-  main{grid-template-columns:1fr;}
-} 
-@media (max-width:768px){
-  .photo{width:140px;height:140px} 
-  .right h1{font-size:1.8rem}
-} 
-@media (max-width:480px){
-  .cv-btn{padding:8px 14px;font-size:0.9rem} 
-  .right h1{font-size:1.6rem} 
-  .chip{font-size:0.8rem;padding:6px 10px}
-}
-
-footer{
-  max-width:1100px;
-  margin:12px auto;
-  color:var(--muted);
-  text-align:center;
-  font-size:0.9rem;
-}
- </style>  <!-- Fim de Cores e estilo -->
+    footer{
+      max-width:1100px;
+      margin:12px auto;
+      color:var(--muted);
+      text-align:center;
+      font-size:0.9rem;
+    }
+  </style>
 </head>
-
 
 <body>
   <header>
-      <!-- Menu -->
     <nav class="nav">
       <div class="brand">Anielle Ferrari</div>
       <div class="menu">
@@ -256,33 +223,26 @@ footer{
         <a href="trabalhos.html">Trabalhos</a>
         <a href="contato.html">Contato</a>
       </div>
-    </nav> <!-- fim de Menu -->
+    </nav>
   </header>
 
-
-
-  <main><!-- Meu perfil -->
+  <main>
     <aside class="left">
       <div class="photo">
         <img src="perfil/fotome.png" alt="Anielle Ferrari">
       </div>
       <div style="text-align:center">
         <div style="font-weight:700;font-size:1.05rem;margin-bottom:6px">Anielle Salviano de Almeida Ferrari</div>
-        <div style="color:var(--muted);font-size:0.95rem;margin-bottom:12px">PhD Candidate @ University of São Paulo • Microbiology • Leptospirosis • Signaling in bacteria</div>
+        <div style="color:var(--muted);font-size:0.95rem;margin-bottom:12px">PhD Candidate at University of São Paulo   Microbiology • Leptospirosis • Signaling in bacteria</div>
       </div>
 
-      <!-- Redes sociais em duas linhas -->
       <div class="socials">
         <div class="social-row">
-
-          <!-- email, orcid, scholar e reserchgate -->
           <a href="mailto:anielle.ferrari@usp.br"><img src="icons/email.png" alt="Email"></a>
           <a href="https://orcid.org/0000-0001-7072-4846" target="_blank"><img src="icons/orcid.png" alt="ORCID"></a>
           <a href="https://scholar.google.com/citations?user=24JtB7UAAAAJ&hl=en" target="_blank"><img src="icons/scholar.png" alt="Google Scholar"></a>
           <a href="https://www.researchgate.net/profile/Anielle-Ferrari" target="_blank"><img src="icons/researchgate.png" alt="ResearchGate"></a>
-          </div>
-        
-
+        </div>
         <div class="social-row">
           <a href="https://www.linkedin.com/in/anielle-ferrari-5a15bb127/" target="_blank" title="LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
           <a href="https://github.com/anielleferrari" target="_blank" title="GitHub"><img src="icons/github.png" alt="GitHub"></a>
@@ -291,46 +251,49 @@ footer{
         </div>
       </div>
 
-      <a class="cv-btn" href="#" download>Baixar CV</a>
+      <a class="cv-btn" href="#" download>Download CV</a>
       <div style="margin-top:12px;color:var(--muted);font-size:0.95rem;text-align:center">
         <strong>Where</strong> São Paulo, Brazil<br>
         <strong>Email:</strong> anielle.ferrari@usp.br
-      </div> <!-- fim de Meu perfil -->
+      </div>
     </aside>
 
+    <section class="right">
+      <h1>Anielle Salvinano de Almeida Ferrari</h1>
+      <h3><em>she / her / hers</em></h3>
+      <h3><b>Affiliations:</b> University of Sao Paulo (USP) – Institute of Biomedical Sciences (ICB)</h3>
+      <p class="lead">I am a PhD candidate in Microbiology at the <a href="https://microbiologia.icb.usp.br/">Institute of Biomedical Sciences (ICB)</a>, <a href="https://www5.usp.br/english/institutional/">University of Sao Paulo (USP)</a>, supervised by <a href="https://cepidb3.iq.usp.br/home/biologiaestruturalusp/">Prof. Dr. Cristiane Rodrigues Guzzo</a> in the Laboratory of Structure and Evolution of Proteins (LSEP) group. My research focuses on <em>Leptospira interrogans</em> and bacterial signaling via c-di-GMP.</p>
+      <p class="lead">My scientific interests include spirochetes, particularly <em>Leptospira</em>, as well as structural biology, dinucleotides and bacterial signaling pathways.</p>
 
-
-    <section class="right"><!-- Conteúdo Sobre mim -->
-      <h1>Olá — eu sou Anielle</h1>
-      <p class="lead">Sou pesquisadora em microbiologia com interesse em bioinformática, anotação genômica e análise estrutural de proteínas. Trabalho com experimentos de bancada e análises <em>in silico</em> para responder perguntas sobre sinalização bacteriana.</p>
+     <p class="lead">Outside of research, I enjoy coffee, animals, dancing, music, the beach, and, of course, I am a proud member of Ravenclaw.</p>
+      </p>
       <div class="meta">
-        <div style="margin-bottom:8px"><strong>Atual:</strong> Doutorado — projeto sobre c-di-AMP em <em>Leptospira</em></div>
         <div class="skills">
-          <span class="chip">Genômica</span>
-          <span class="chip">Python</span>
-          <span class="chip">BLAST</span>
-          <span class="chip">Análise estrutural</span>
+          <span class="chip">Genomics</span>
+          <span class="chip">Structural Biology</span>
+          <span class="chip">Signaling Pathways</span>
+          <span class="chip">Leptospirosis</span>
         </div>
       </div>
 
       <hr>
 
-      <h2 style="font-family:'Playfair Display',serif;margin:0 0 8px">Projetos</h2>
-      <p style="color:var(--muted)">Aqui você pode listar 2–4 projetos com links para repositórios ou preprints.</p>
+      <h2>Education</h2>
       <ul style="color:var(--muted)">
-        <li><strong>Montagem de novo genoma</strong> — análise e anotação de espécie possivelmente nova.</li>
-        <li><strong>Análise de KtrA</strong> — BLAST, alinhamentos e modelagem estrutural.</li>
+        <li><strong>PhD candidate in Microbiology</strong> — University of Sao Paulo.</li>
+        <li><strong>Bachelor in Bioscience, 2018</strong> — University of Sao Paulo.</li>
       </ul>
 
       <hr>
 
-      <h2 style="font-family:'Playfair Display',serif">Contato</h2>
-      <p style="color:var(--muted)">Me mande um e-mail para <a href="mailto:anielle.ferrari@usp.br">anielle.ferrari@usp.br</a> ou acesse meu <a href="https://github.com/anielleferrari">GitHub</a>.</p>
+      <h2>Contato</h2>
+      <p style="color:var(--muted)">Send me an e-mail <a href="mailto:anielle.ferrari@usp.br">anielle.ferrari@usp.br</a> or access my <a href="https://github.com/anielleferrari">GitHub</a>.</p>
     </section>
-  </main><!-- fim de Conteúdo Sobre mim -->
+  </main>
 
   <footer>
-    ♥ Made by Anielle Ferrari, using HTML 5 and CSS. ♥
+    <p>Thank you for visiting my personal website.</p>
+    <p>♥ Made by Anielle Ferrari, using HTML 5 and CSS. ♥</p>
   </footer>
 </body>
 </html>

@@ -1,1 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications | Anielle Ferrari</title>
+  <link rel="icon" type="image/png" href="microscope_1860786.png">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lota:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#ffffff;
+      --menu-bg:#18BC9C;
+      --accent:#18BC9C;
+      --muted:#8b949e;
+      --text:#0b0f1a;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html, body {
+      height:100%;
+      font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover { color: #0f7767; }
+
+    header{
+      position:fixed;
+      left:0; right:0; top:0;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--menu-bg);
+      z-index:30;
+    }
+
+    .nav{
+      width:100%;
+      max-width:1100px;
+      padding:0 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #052A24;
+    }
+
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+
+    .menu a{
+      font-weight:600;
+      font-size:0.95rem;
+      color: #052A24;
+    }
+    .menu a:hover{ color: #ffffff; }
+    .menu a.active{ color: #ffffff; border-bottom: 2px solid #ffffff; }
+
+    main{
+      max-width:900px;
+      margin:110px auto 60px;
+      padding:24px;
+    }
+
+    h1, h2 {
+      font-family: 'Lota', sans-serif;
+      font-weight: 700;
+      color:#052A24;
+      margin-bottom:16px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid rgba(0,0,0,0.05);
+      padding-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 32px;
+    }
+
+    .pub-list {
+      list-style: none;
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .pub-list li {
+      margin-bottom: 18px;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:12px auto;
+      color:var(--muted);
+      text-align:center;
+      font-size:0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">Anielle Ferrari</div>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Publications</h1>
+
+    <h2>Peer-reviewed articles</h2>
+    <ul class="pub-list">
+      <li><b>Ferrari, A. S. A.</b>, Pires, B. R., dos Santos, L. F., Nascimento, A. L. T. O., & Guzzo, C. R. (2025). <em>Unveiling the potential role of c-di-GMP in the pathogenic spirochete Leptospira interrogans.</em> <em>Viruses, 17</em>(1), 57. <a href="https://www.mdpi.com/1999-4915/17/1/57" target="_blank">https://doi.org/10.3390/v17010057</a></li>
+
+      <li><b>Ferrari, A. S. A.</b>, Pires, B. R., da Silva, A. R., Nascimento, A. L. T. O., & Guzzo, C. R. (2024). <em>Insights into potassium homeostasis in Leptospira: genomic and structural characterization of the KtrAB potassium uptake system.</em> <em>Viruses, 16</em>(6), 844. <a href="https://www.mdpi.com/1999-4915/16/6/844" target="_blank">https://doi.org/10.3390/v16060844</a></li>
+
+      <li>Agudelo, J., <b>Ferrari, A. S. A.</b>, Mattos, K. A., & Bozza, P. T. (2016). <em>Pathogenic mechanisms of leptospirosis: lessons from animal models.</em> <em>ACS Omega, 1</em>(5), 944–951. <a href="https://pubs.acs.org/doi/full/10.1021/acsomega.5c02786" target="_blank">https://doi.org/10.1021/acsomega.5c02786</a></li>
+    </ul>
+
+    <h2>Preprints</h2>
+    <ul class="pub-list">
+      <li><b>Ferrari, A. S. A.</b>, Pires, B. R., da Silva, A. R., & Guzzo, C. R. (2025). <em>c-di-AMP signaling in Leptospira: genomic, structural and evolutionary perspectives.</em> <em>Preprints</em> 2025050068. <a href="https://www.preprints.org/manuscript/202505.0068" target="_blank">https://doi.org/10.20944/preprints202505.0068.v1</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Thank you for visiting my publications page.</p>
+    <p>♥ Made by Anielle Ferrari, using HTML 5 and CSS. ♥</p>
+  </footer>
+</body>
+</html>
 

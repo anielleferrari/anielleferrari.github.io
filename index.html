@@ -1,31 +1,119 @@
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
- <title>Anielle Ferrari | Microbiologist </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anielle Ferrari | Microbiologist </title>
   <link rel="icon" type="image/png" href="microscope_1860786.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --menu-bg:#18BC9C;
+      --accent:#f5c518;
+      --muted:#8b949e;
+      --text:#0b0f1a;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html,body{height:100%;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text);}
+    a{color:var(--accent); text-decoration:none}
+    header{position:fixed;left:0;right:0;top:0;height:64px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);background:var(--menu-bg);border-bottom:1px solid rgba(0,0,0,0.05);z-index:30}
+    .nav{width:100%;max-width:1100px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;letter-spacing:0.08em;font-family:'Playfair Display',serif;color:#ffffff}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{font-weight:600;font-size:0.95rem;color:#ffffff}
+
+    main{max-width:1100px;margin:110px auto 60px;padding:24px;display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:start;}
+    .left{display:flex;flex-direction:column;align-items:center;gap:18px}
+    .photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:6px solid rgba(0,0,0,0.05);}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .socials{display:flex;gap:12px;justify-content:center;margin-bottom:12px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:var(--glass);border:1px solid rgba(0,0,0,0.05);font-weight:600;color:var(--muted);font-size:0.9rem}
+    .cv-btn{padding:10px 18px;border-radius:10px;background:linear-gradient(180deg, rgba(245,197,24,0.12), rgba(245,197,24,0.08));border:1px solid rgba(245,197,24,0.22);color:var(--accent);font-weight:700}
+
+    .right h1{font-family:'Playfair Display',serif;font-size:2.2rem;margin:0 0 6px}
+    .right p.lead{color:var(--muted);font-size:1.02rem;margin-top:4px}
+    .meta{margin-top:12px;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(0,0,0,0.02);border:1px solid rgba(0,0,0,0.02);font-weight:600;color:var(--muted);font-size:0.9rem}
+    hr{border:none;border-top:1px solid rgba(0,0,0,0.05);margin:32px 0}
+
+    @media (max-width:1100px){main{grid-template-columns:1fr;}} 
+    @media (max-width:768px){.photo{width:140px;height:140px} .right h1{font-size:1.8rem}} 
+    @media (max-width:480px){.cv-btn{padding:8px 14px;font-size:0.9rem} .right h1{font-size:1.6rem} .chip{font-size:0.8rem;padding:6px 10px}}
+
+    footer{max-width:1100px;margin:12px auto;color:var(--muted);text-align:center;font-size:0.9rem}
+  </style>
 </head>
 <body>
-
-  <nav>
-    <a href="index.html" class="logo">Anielle Ferrari [Seu Nome Completo]</a>
-    <div>
-      <a href="research.html" class="menu-link">Research</a>
-      <a href="cv.html" class="menu-link">CV</a>
-      <a href="contact.html" class="menu-link">Contact</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+      <div class="brand">Anielle Ferrari</div>
+      <div class="menu">
+        <a href="index.html">Sobre</a>
+        <a href="trabalhos.html">Trabalhos</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+  </header>
 
   <main>
-    <section id="about">
-      <img src="sua-foto.jpg" alt="Anielle Ferrari" class="about-photo">
-      <h1>Hello, I'm Anielle Ferrari</h1>
-      <p>Microbiologist and researcher focused on [interesses principais].</p>
-      <p>I work on [breve descrição sobre pesquisas, bioinformática, etc.].</p>
+    <aside class="left">
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Sua foto">
+      </div>
+      <div style="text-align:center">
+        <div style="font-weight:700;font-size:1.05rem;margin-bottom:6px">Anielle Ferrari</div>
+        <div style="color:var(--muted);font-size:0.95rem;margin-bottom:12px">Doutoranda • Microbiologia & Bioinformática</div>
+      </div>
+      <div class="socials">
+        <a href="#">GH</a>
+        <a href="#">in</a>
+        <a href="#">tw</a>
+      </div>
+      <a class="cv-btn" href="#" download>Baixar CV</a>
+      <div style="margin-top:12px;color:var(--muted);font-size:0.95rem;text-align:center">
+        <strong>Local:</strong> São Paulo, Brasil<br>
+        <strong>Email:</strong> seu@email.com
+      </div>
+    </aside>
+
+    <section class="right">
+      <h1>Olá — eu sou Anielle</h1>
+      <p class="lead">Sou pesquisadora em microbiologia com interesse em bioinformática, anotação genômica e análise estrutural de proteínas. Trabalho com experimentos de bancada e análises <em>in silico</em> para responder perguntas sobre sinalização bacteriana.</p>
+      <div class="meta">
+        <div style="margin-bottom:8px"><strong>Atual:</strong> Doutorado — projeto sobre c-di-AMP em <em>Leptospira</em></div>
+        <div class="skills">
+          <span class="chip">Genômica</span>
+          <span class="chip">Python</span>
+          <span class="chip">BLAST</span>
+          <span class="chip">Análise estrutural</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <h2 style="font-family:'Playfair Display',serif;margin:0 0 8px">Projetos</h2>
+      <p style="color:var(--muted)">Aqui você pode listar 2–4 projetos com links para repositórios ou preprints.</p>
+      <ul style="color:var(--muted)">
+        <li><strong>Montagem de novo genoma</strong> — análise e anotação de espécie possivelmente nova.</li>
+        <li><strong>Análise de KtrA</strong> — BLAST, alinhamentos e modelagem estrutural.</li>
+      </ul>
+
+      <hr>
+
+      <h2 style="font-family:'Playfair Display',serif">Contato</h2>
+      <p style="color:var(--muted)">Me mande um e-mail para <a href="mailto:seu@email.com">seu@email.com</a> ou acesse meu <a href="#">GitHub</a>.</p>
     </section>
   </main>
 
+  <footer>
+    Feito com ♥ — adaptado para você.
+  </footer>
 </body>
 </html>
+

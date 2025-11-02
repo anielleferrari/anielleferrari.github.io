@@ -7,8 +7,6 @@
     <!-- ícone na aba -->
   <link rel="icon" type="image/png" href="microscope_1860786.png">
 
-  <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-rXf1k2q3D7bsP7LZpmxZ7hqgP0vY+qk7/6+6nQmW4X+LObqF9M8F1Dzp7l2kZdfO0b/fhn9hqC9/gp1t8+1Z1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,35 +37,46 @@
     .photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:6px solid rgba(0,0,0,0.05);}
     .photo img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* Redes sociais em duas linhas */
-    .socials{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      justify-content:center;
-      margin-bottom:12px;
-    }
-    .social-row{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-    }
-    .social-row a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:40px;
-      height:40px;
-      border-radius:10px;
-      background:var(--glass);
-      border:1px solid rgba(0,0,0,0.05);
-      font-size:1.1rem;
-      color:var(--muted);
-    }
-    .icon-social{
-      width:22px;
-      height:22px;
-    }
+   /* Redes sociais em duas linhas */
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--glass);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-row a:hover {
+  transform: scale(1.1);
+  background: rgba(24, 188, 156, 0.1);
+}
+
+/* Aqui o ajuste importante */
+.social-row img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
 
     .cv-btn{padding:10px 18px;border-radius:10px;background:linear-gradient(180deg, rgba(245,197,24,0.12), rgba(245,197,24,0.08));border:1px solid rgba(245,197,24,0.22);color:var(--accent);font-weight:700}
 

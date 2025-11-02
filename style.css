@@ -1,41 +1,80 @@
-body {
-  font-family: 'Helvetica', sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+}
+
+/* Menu fixo */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  border-bottom: 1px solid #eee;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-nav a {
+nav a.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #222;
   text-decoration: none;
+}
+
+nav a.menu-link {
+  margin-left: 2em;
   color: #32BEA6;
-  margin-left: 1.5em;
+  text-decoration: none;
   font-weight: 500;
 }
 
-nav a:hover {
-  color: #2a8f7c;
+nav a.menu-link:hover {
+  text-decoration: underline;
 }
 
-h1, h2 {
-  color: #32BEA6;
-}
-
+/* Conteúdo */
 main {
-  padding: 6em 2em 2em;
+  margin-top: 80px; /* para não ficar atrás do menu */
+  padding: 2em;
   max-width: 900px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Seções */
+section {
+  margin-bottom: 4em;
+}
+
+/* Foto de perfil */
+.about-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a.menu-link {
+    margin: 0.5em 0 0 0;
+  }
 }

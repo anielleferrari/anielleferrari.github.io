@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications | Anielle Ferrari</title>
+  <title>Contact | Anielle Ferrari</title>
   <link rel="icon" type="image/png" href="microscope_1860786.png">
 
   <!-- Fontes -->
@@ -19,6 +19,7 @@
       --accent:#18BC9C;
       --muted:#8b949e;
       --text:#0b0f1a;
+      --glass: rgba(255,255,255,0.03);
     }
 
     *{box-sizing:border-box; margin:0; padding:0;}
@@ -80,45 +81,79 @@
       max-width:900px;
       margin:110px auto 60px;
       padding:24px;
-    }
-
-    h1, h2 {
-      font-family: 'Lota', sans-serif;
-      font-weight: 700;
-      color:#052A24;
-      margin-bottom:16px;
+      text-align:center;
     }
 
     h1 {
+      font-family: 'Lota', sans-serif;
+      font-weight: 700;
+      color:#052A24;
       font-size: 1.8rem;
       margin-bottom: 24px;
       border-bottom: 2px solid rgba(0,0,0,0.05);
       padding-bottom: 8px;
     }
 
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 32px;
+    .socials {
+      margin-top:32px;
     }
 
-    .pub-list {
-      list-style: none;
-      margin-top: 12px;
-      color: var(--muted);
+    .social-row {
+      display: flex;
+      flex-wrap: wrap; /* quebra se não couber na tela */
+      justify-content: center;
+      gap: 12px;
     }
 
-    .pub-list li {
-      margin-bottom: 18px;
-      line-height: 1.6;
-      font-size: 1rem;
+    .social-row a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px; height:40px;
+      border-radius:10px;
+      background:var(--glass);
+      border:1px solid rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .social-row a:hover{
+      transform: scale(1.1);
+      background: rgba(24, 188, 156, 0.1);
+    }
+    .social-row img{
+      width:22px; height:22px;
+      object-fit:contain;
+    }
+
+    .cv-btn{
+      display:inline-block;
+      margin-top:24px;
+      padding:10px 18px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(24,188,156,0.12), rgba(24,188,156,0.12));
+      border:1px solid rgba(42,143,124,0.22);
+      color:#052A24;
+      font-weight:700;
+      text-decoration: none;
     }
 
     footer{
       max-width:1100px;
-      margin:12px auto;
+      margin:32px auto;
       color:var(--muted);
       text-align:center;
       font-size:0.9rem;
+    }
+
+    @media (max-width:480px){
+      .social-row a{
+        width:36px;
+        height:36px;
+      }
+      .social-row img{
+        width:18px;
+        height:18px;
+      }
+      .cv-btn{padding:8px 14px;}
     }
   </style>
 </head>
@@ -129,35 +164,34 @@
       <div class="brand">Anielle Ferrari</div>
       <div class="menu">
         <a href="index.html">Home</a>
-        <a href="publications.html" class="active">Publications</a>
-        <a href="contact.html">Contact</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html" class="active">Contact</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <h1>Contacts</h1>
-      <div class="socials">
-        <div class="social-row">
-          <a href="mailto:anielle.ferrari@usp.br"><img src="icons/email.png" alt="Email"></a>
-          <a href="https://orcid.org/0000-0001-7072-4846" target="_blank"><img src="icons/orcid.png" alt="ORCID"></a>
-          <a href="https://scholar.google.com/citations?user=24JtB7UAAAAJ&hl=en" target="_blank"><img src="icons/scholar.png" alt="Google Scholar"></a>
-          <a href="https://www.researchgate.net/profile/Anielle-Ferrari" target="_blank"><img src="icons/researchgate.png" alt="ResearchGate"></a>
-        </div>
-        <div class="social-row">
-          <a href="https://www.linkedin.com/in/anielle-ferrari-5a15bb127/" target="_blank" title="LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-          <a href="https://github.com/anielleferrari" target="_blank" title="GitHub"><img src="icons/github.png" alt="GitHub"></a>
-          <a href="https://bsky.app/profile/anielleferrari.bsky.social" target="_blank" title="Bluesky"><img src="icons/bluesky.png" alt="BlueSky"></a>
-          <a href="http://lattes.cnpq.br/3091634675002248" target="_blank" title="Lattes"><img src="icons/lattes.png" alt="Currículo Lattes"></a>
-        </div>
-      </div>
+    <h1>Contact Me</h1>
 
-      <a class="cv-btn" href="#" download>Download CV</a>
-    
+    <div class="socials">
+      <div class="social-row">
+        <a href="mailto:anielle.ferrari@usp.br"><img src="icons/email.png" alt="Email"></a>
+        <a href="https://orcid.org/0000-0001-7072-4846" target="_blank"><img src="icons/orcid.png" alt="ORCID"></a>
+        <a href="https://scholar.google.com/citations?user=24JtB7UAAAAJ&hl=en" target="_blank"><img src="icons/scholar.png" alt="Google Scholar"></a>
+        <a href="https://www.researchgate.net/profile/Anielle-Ferrari" target="_blank"><img src="icons/researchgate.png" alt="ResearchGate"></a>
+        <a href="https://www.linkedin.com/in/anielle-ferrari-5a15bb127/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/anielleferrari" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+        <a href="https://bsky.app/profile/anielleferrari.bsky.social" target="_blank"><img src="icons/bluesky.png" alt="BlueSky"></a>
+        <a href="http://lattes.cnpq.br/3091634675002248" target="_blank"><img src="icons/lattes.png" alt="Currículo Lattes"></a>
+      </div>
+    </div>
+
+    <a class="cv-btn" href="#" download>Download CV</a>
+  </main>
+
   <footer>
-    <p>Thank you for visiting my publications page.</p>
+    <p>Thank you for visiting my contact page.</p>
     <p>♥ Made by Anielle Ferrari, using HTML 5 and CSS. ♥</p>
   </footer>
 </body>
 </html>
-

@@ -1,14 +1,21 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anielle Ferrari | Microbiologist </title>
+  <title>Anielle Ferrari | Microbiologist</title>
+    <!-- ícone na aba -->
   <link rel="icon" type="image/png" href="microscope_1860786.png">
+
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-rXf1k2q3D7bsP7LZpmxZ7hqgP0vY+qk7/6+6nQmW4X+LObqF9M8F1Dzp7l2kZdfO0b/fhn9hqC9/gp1t8+1Z1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Cores e estilo -->
   <style>
     :root{
       --bg:#ffffff;
@@ -20,7 +27,7 @@
     }
     *{box-sizing:border-box; margin:0; padding:0;}
     html,body{height:100%;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text);}
-    a{color:var(--accent); text-decoration:none}
+    a{color:var(--accent); text-decoration:none;}
     header{position:fixed;left:0;right:0;top:0;height:64px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);background:var(--menu-bg);border-bottom:1px solid rgba(0,0,0,0.05);z-index:30}
     .nav{width:100%;max-width:1100px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
     .brand{font-weight:700;letter-spacing:0.08em;font-family:'Playfair Display',serif;color:#ffffff}
@@ -31,8 +38,37 @@
     .left{display:flex;flex-direction:column;align-items:center;gap:18px}
     .photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:6px solid rgba(0,0,0,0.05);}
     .photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .socials{display:flex;gap:12px;justify-content:center;margin-bottom:12px}
-    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:var(--glass);border:1px solid rgba(0,0,0,0.05);font-weight:600;color:var(--muted);font-size:0.9rem}
+
+    /* Redes sociais em duas linhas */
+    .socials{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      justify-content:center;
+      margin-bottom:12px;
+    }
+    .social-row{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+    }
+    .social-row a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px;
+      height:40px;
+      border-radius:10px;
+      background:var(--glass);
+      border:1px solid rgba(0,0,0,0.05);
+      font-size:1.1rem;
+      color:var(--muted);
+    }
+    .icon-social{
+      width:22px;
+      height:22px;
+    }
+
     .cv-btn{padding:10px 18px;border-radius:10px;background:linear-gradient(180deg, rgba(245,197,24,0.12), rgba(245,197,24,0.08));border:1px solid rgba(245,197,24,0.22);color:var(--accent);font-weight:700}
 
     .right h1{font-family:'Playfair Display',serif;font-size:2.2rem;margin:0 0 6px}
@@ -70,11 +106,26 @@
         <div style="font-weight:700;font-size:1.05rem;margin-bottom:6px">Anielle Ferrari</div>
         <div style="color:var(--muted);font-size:0.95rem;margin-bottom:12px">Doutoranda • Microbiologia & Bioinformática</div>
       </div>
+
+      <!-- Redes sociais em duas linhas -->
       <div class="socials">
-        <a href="#">GH</a>
-        <a href="#">in</a>
-        <a href="#">tw</a>
+        <div class="social-row">
+
+          <!-- email, orcid, scholar e reserchgate -->
+          <a href="mailto:anielle.ferrari@usp.br" target="_blank"><img src="icons/email.png" alt="Email"></a>
+          <a href="https://orcid.org/0000-0000-0000-0000" target="_blank"><img src="icons/orcid.png" alt="ORCID"></a>
+          <a href="https://scholar.google.com/citations?user=XXXX" target="_blank"><img src="icons/scholar.png" alt="Google Scholar"></a>
+          <a href="https://researchgate.net/profile/seu_nome" target="_blank"><img src="icons/researchgate.png" alt="ResearchGate"></a>
+          </div>
+        
+
+        <div class="social-row">
+          <a href="https://linkedin.com/in/seuusuario" target="_blank" title="LinkedIn"><img src="icons/linkedin.png" alt="ResearchGate"></a>
+          <a href="https://github.com/seuusuario" target="_blank" title="GitHub"><img src="icons/github.png" alt="ResearchGate"></a>
+          <a href="https://blueskyweb.xyz/seuusuario" target="_blank" title="Bluesky"><img src="icons/bluesky.png" alt="ResearchGate"></a>
+        </div>
       </div>
+
       <a class="cv-btn" href="#" download>Baixar CV</a>
       <div style="margin-top:12px;color:var(--muted);font-size:0.95rem;text-align:center">
         <strong>Local:</strong> São Paulo, Brasil<br>
@@ -112,8 +163,7 @@
   </main>
 
   <footer>
-    Feito com ♥ — adaptado para você.
+    ♥ Made by Anielle Ferrari. ♥
   </footer>
 </body>
 </html>
-
